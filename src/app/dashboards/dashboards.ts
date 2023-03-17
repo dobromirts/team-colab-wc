@@ -96,6 +96,11 @@ export default class Dashboards extends LitElement {
     .image {
       height: 100%;
     }
+    .text {
+      width: 162px;
+      height: max-content;
+      min-width: min-content;
+    }
     .media-content {
       height: 120px;
     }
@@ -149,14 +154,6 @@ export default class Dashboards extends LitElement {
             <div slot="end">
               <span class="material-icons icon_1">
                 access_time
-              </span>
-            </div>
-          </igc-list-item>
-          <igc-list-item>
-            <div slot="title">Samples</div>
-            <div slot="end">
-              <span class="material-icons icon">
-                ballot
               </span>
             </div>
           </igc-list-item>
@@ -250,6 +247,9 @@ export default class Dashboards extends LitElement {
               </igc-icon-button>
             </igc-card-actions>
           </igc-card>
+          <p class="typography__body-1 text">
+            Body 1
+          </p>
           <igc-button variant="fab" class="button">
             <span class="material-icons">
               add
