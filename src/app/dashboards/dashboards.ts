@@ -1,8 +1,8 @@
 import { html, css, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { defineComponents, IgcButtonComponent, IgcCardComponent, IgcIconButtonComponent, IgcIconComponent, IgcListComponent, IgcListItemComponent, IgcRippleComponent } from 'igniteui-webcomponents';
+import { defineComponents, IgcButtonComponent, IgcCardComponent, IgcIconButtonComponent, IgcIconComponent, IgcListComponent, IgcListItemComponent, IgcRippleComponent, IgcSelectComponent } from 'igniteui-webcomponents';
 
-defineComponents(IgcListComponent, IgcListItemComponent, IgcIconComponent, IgcCardComponent, IgcIconButtonComponent, IgcRippleComponent, IgcButtonComponent);
+defineComponents(IgcListComponent, IgcListItemComponent, IgcIconComponent, IgcCardComponent, IgcIconButtonComponent, IgcRippleComponent, IgcSelectComponent, IgcButtonComponent);
 
 @customElement('app-dashboards')
 export default class Dashboards extends LitElement {
@@ -112,6 +112,11 @@ export default class Dashboards extends LitElement {
       margin: 0 0 16px;
       height: max-content;
       min-width: min-content;
+    }
+    .select {
+      height: max-content;
+      min-width: min-content;
+      flex-shrink: 0;
     }
     .button {
       z-index: 1;
@@ -250,6 +255,11 @@ export default class Dashboards extends LitElement {
           <p class="typography__body-1 text">
             Body 1
           </p>
+          <igc-select ?outlined="${true}" label="Label/Placeholder" class="select">
+            <igc-select-item value="Option">
+              Option
+            </igc-select-item>
+          </igc-select>
           <igc-button variant="fab" class="button">
             <span class="material-icons">
               add
